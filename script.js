@@ -7,6 +7,8 @@ var recMoveSchool = document.getElementById("moveSchool");
 var recActivity = document.getElementById("activity");
 var recSchool;
 var recAct;
+var temptime;
+var temparature;
 
 play = setInterval(function(){
 
@@ -18,6 +20,11 @@ play = setInterval(function(){
     var distH = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)); 
     var distM = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)); 
     var distS = Math.floor((distance % (1000 * 60)) / 1000);
+
+    temptime = (d.getHours()*Math.PI/12) - Math.PI*2/3;
+    temparature = (1.7*Math.sin(temptime)+5.8).toFixed(1);
+    console.log(temptime);
+    console.log(temparature);
 
     switch(d.getDay()){
         case 0:
@@ -44,7 +51,7 @@ play = setInterval(function(){
     }
     
     function tempUpdate(){
-        temp.innerHTML = 4.0 + d.getHours()/10 + "℃";
+        temp.innerHTML = temparature + "℃";
         clock.innerHTML = d.getFullYear() +"."+ (d.getMonth()+1)+"."+(d.getDate())+"("+ day +")"+" "+d.getHours()+"시 "+d.getMinutes()+"분 기준";
     }
 
