@@ -24,6 +24,8 @@ p{
 }
 .info:visited{color: black;}
 .info:hover{color: wheat;}
+.info:link{color: black;}
+.info:active{color: black;}
 .mainArticle{
     margin-top: 100px;
     display: grid;
