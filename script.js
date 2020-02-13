@@ -48,13 +48,12 @@ play = setInterval(function(){
         clock.innerHTML = d.getFullYear() +"."+ (d.getMonth()+1)+"."+(d.getDate())+"("+ day +")"+" "+d.getHours()+"시 "+d.getMinutes()+"분 기준";
     }
 
-
     function dateUpdate(){
         dDay.innerHTML = distD + "일 "+ distH +"시간 "+distM+"분 "+distS+"초 <br> 남음";
-    }
-    if(isNaN(distD))
-    {
-        dDay.innerHTML = "어이쿠 불러오는데 실패해버렸네요";
+        if(isNaN(distD))
+        {
+            dDay.innerHTML = "어이쿠 불러오는데 실패해버렸네요";
+        }
     }
 
     tempUpdate();
