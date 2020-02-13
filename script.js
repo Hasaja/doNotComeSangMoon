@@ -1,4 +1,4 @@
-var gradD02 = new Date('2021/02/04/12:00:00').getTime();
+var gradD02 = new Date('2021-02-04T12:00:00Z').getTime();
 var day;
 var temp = document.getElementById("temp");
 var clock = document.getElementById("clock");
