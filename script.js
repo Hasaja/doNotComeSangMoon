@@ -5,6 +5,8 @@ var clock = document.getElementById("clock");
 var dDay = document.getElementById("dDay");
 var recMoveSchool = document.getElementById("moveSchool");
 var recActivity = document.getElementById("activity");
+var icon = document.getElementById("icon");
+var comment = document.getElementById("comment");
 var recSchool;
 var recAct;
 var temptime;
@@ -53,14 +55,18 @@ play = setInterval(function(){
     function tempUpdate(){
         temp.innerHTML = temparature + "℃";
         clock.innerHTML = d.getFullYear() +"."+ (d.getMonth()+1)+"."+(d.getDate())+"("+ day +")"+" "+d.getHours()+"시 "+d.getMinutes()+"분 기준";
+        if(temparature>6){
+            icon.innerHTML = "🌊🏊‍♂️😇";
+            comment.innerHTML = "뛰어들기 괜찮은 수온이네요!";
+        }
+        else {
+            icon.innerHTML="🌙❄️🥶";
+            comment.innerHTML = "지금은 꽤 추워요! 낮에 도전해보도록 해요^^"
+        }
     }
 
     function dateUpdate(){
         dDay.innerHTML = distD + "일 "+ distH +"시간 <br>"+distM+"분 "+distS+"초 <br> 남음";
-        if(isNaN(distD))
-        {
-            dDay.innerHTML = "어이쿠 불러오는데 실패해버렸네요";
-        }
     }
 
     tempUpdate();
