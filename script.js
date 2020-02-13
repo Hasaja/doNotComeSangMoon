@@ -49,7 +49,7 @@ play = setInterval(function(){
     }
 
     function dateUpdate(){
-        dDay.innerHTML = distD + "일 "+ distH +"시간 "+distM+"분 "+distS+"초 <br> 남음";
+        dDay.innerHTML = distD + "일 "+ distH +"시간 <br>"+distM+"분 "+distS+"초 <br> 남음";
         if(isNaN(distD))
         {
             dDay.innerHTML = "어이쿠 불러오는데 실패해버렸네요";

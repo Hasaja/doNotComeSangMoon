@@ -84,3 +84,14 @@ p{
     color: rgb(255, 143, 208);
     margin-bottom: 30px;
 }
+
+@media(max-width : 1000px){
+    .mainArticle{
+        margin-top: 100px;
+        grid-template-columns: 1fr;
+    }
+    .remainder{
+        margin-top: 100px;
+        text-align: left;
+    }
+}
