@@ -56,13 +56,6 @@ p{
 .articleTitle{
     font-size: 30px;
 }
-.food{
-    margin-top: 100px;
-}
-#army{
-    margin-top: 100px;
-}
-
 #mainTitle{
     display: inline;
 }
@@ -115,7 +108,7 @@ p{
     font-weight: bold;
 }
 
-@media(max-width : 1265px){
+@media(max-width : 1292px){
     .mainArticle{
         margin-top: 100px;
         grid-template-columns: 1fr;
