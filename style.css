@@ -59,6 +59,9 @@ p{
 .food{
     margin-top: 100px;
 }
+#army{
+    margin-top: 100px;
+}
 
 #mainTitle{
     display: inline;
@@ -83,7 +86,14 @@ p{
 #remainTitle{
     color: rgb(248, 193, 153);
 }
+#armyremainTitle{
+    color: rgb(49, 82, 0);
+}
 #dDay{
+    font-size: 100px;
+    font-weight: bold;
+}
+#armyDDay{
     font-size: 100px;
     font-weight: bold;
 }

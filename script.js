@@ -1,4 +1,5 @@
 var gradD02 = new Date('2021-02-04T12:00:00Z').getTime();
+var armyD = new Date('2022-08-01T14:30:00Z').getTime();
 var day;
 var temp = document.getElementById("temp");
 var clock = document.getElementById("clock");
@@ -7,6 +8,7 @@ var recMoveSchool = document.getElementById("moveSchool");
 var recActivity = document.getElementById("activity");
 var icon = document.getElementById("icon");
 var comment = document.getElementById("comment");
+var armyDDay = document.getElementById("armyDDay");
 var recSchool;
 var recAct;
 var temptime;
@@ -17,11 +19,17 @@ play = setInterval(function(){
     var d = new Date();
     var now = d.getTime();
     var distance = gradD02 - now;
+    var distance2 = armyD - now;
     
     var distD = Math.floor(distance/(1000*60*60*24));
     var distH = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)); 
     var distM = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)); 
     var distS = Math.floor((distance % (1000 * 60)) / 1000);
+
+    var distD2 = Math.floor(distance2/(1000*60*60*24));
+    var distH2 = Math.floor((distance2 % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)); 
+    var distM2 = Math.floor((distance2 % (1000 * 60 * 60)) / (1000 * 60)); 
+    var distS2 = Math.floor((distance2 % (1000 * 60)) / 1000);
 
     temptime = (d.getHours()*Math.PI/12) - Math.PI*2/3;
     temparature = (1.7*Math.sin(temptime)+5.8).toFixed(1);
@@ -69,8 +77,13 @@ play = setInterval(function(){
         dDay.innerHTML = distD + "일 "+ distH +"시간 <br>"+distM+"분 "+distS+"초 <br> 남음";
     }
 
+    function armyDateUpdate(){
+        armyDDay.innerHTML = distD2 + "일 "+ distH2 +"시간 <br>"+distM2+"분 "+distS2+"초 <br> 남음";
+    }
+
     tempUpdate();
     dateUpdate();
+    armyDateUpdate();
     
 },60);
 
