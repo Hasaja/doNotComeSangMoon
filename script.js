@@ -62,7 +62,7 @@ play = setInterval(function(){
     
     function tempUpdate(){
         temp.innerHTML = temparature + "℃";
-        clock.innerHTML = d.getFullYear() +"."+ (d.getMonth()+1)+"."+(d.getDate())+"("+ day +")"+" "+d.getHours()+"시 "+d.getMinutes()+"분 기준";
+        clock.innerHTML = d.getFullYear() +"."+ (d.getMonth()+1)+"."+(d.getDate())+"("+ day +")"+" "+d.getHours()+"시 기준";
         if(temparature>6){
             icon.innerHTML = "🌊🏊‍♂️😇";
             comment.innerHTML = "뛰어들기 괜찮은 수온이네요!";
